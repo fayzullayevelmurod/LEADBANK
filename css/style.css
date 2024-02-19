@@ -417,7 +417,7 @@ footer h6 {
 }
 @media only screen and (max-width: 993px) {
   header {
-    margin: 45px 0 30px 0;
+    padding: 25px 0 25px 0;
   }
   header .header_center {
     display: none;
@@ -506,6 +506,8 @@ footer h6 {
     line-height: 145%;
   }
   .cards .card .card_block h5 {
+    border: none !important;
+    color: rgb(77, 77, 77);
     font-size: 16px;
     font-weight: 600;
     line-height: 145%;
