@@ -48,7 +48,7 @@ address {
 }
 
 .wrapper {
-  background-color: rgb(229, 229, 229);
+  background: rgb(250, 250, 250);
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -135,26 +135,30 @@ header .header_right span {
 }
 
 .home {
+  position: relative;
   max-width: 1760px;
   margin: 0 auto;
-  background-image: url("../images/home_bg.png");
+  background-image: url("../images/home_bg_new.png");
   background-repeat: no-repeat;
   background-size: cover;
-}
-.home .home_text {
-  padding: 125px 0 65px 0;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0px 15px 31.7px -11px rgba(0, 43, 90, 0.25);
 }
 .home .main_container {
-  display: flex;
-  align-items: center;
+  padding: 125px 20px 125px 20px;
   position: relative;
+}
+.home .home_img {
+  position: absolute;
+  top: 55px;
+  right: -215px;
 }
 .home h1 {
   color: rgb(44, 44, 44);
   font-size: 42px;
   font-weight: 700;
   line-height: 130%;
-  letter-spacing: 2%;
   max-width: 574px;
   margin-bottom: 25px;
 }
@@ -188,6 +192,72 @@ header .header_right span {
   background: linear-gradient(48.99deg, rgb(6, 118, 249) -7.35%, rgb(90, 176, 255) 106.391%), linear-gradient(42.1deg, rgb(147, 62, 255) -0.918%, rgb(181, 122, 255) 102.836%), linear-gradient(0deg, rgb(5, 231, 27), rgb(5, 231, 27) 100%);
 }
 
+.home_media {
+  display: none;
+  box-shadow: 0px 15px 31.7px -11px rgba(0, 43, 90, 0.25);
+  margin: 0 20px 110px 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 50px 0 80px 0;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/home_media_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home_media h1 {
+  max-width: 280px;
+  margin: 0 auto 26px auto;
+  color: rgb(44, 44, 44);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 4%;
+  text-align: center;
+}
+.home_media a {
+  color: rgb(255, 255, 255);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 145%;
+  letter-spacing: 5%;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 100px;
+  width: 280px;
+  height: 70px;
+  margin: 26px auto 34px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0px -5px 23px 0px rgba(255, 255, 255, 0.31), inset 0px 6px 23px 0px rgba(255, 255, 255, 0.35);
+  background: linear-gradient(48.99deg, rgb(6, 118, 249) -7.368%, rgb(90, 176, 255) 106.407%), linear-gradient(42.1deg, rgb(147, 62, 255) -0.879%, rgb(181, 122, 255) 102.844%), linear-gradient(0deg, rgb(5, 231, 27), rgb(5, 231, 27) 100%);
+}
+.home_media ul {
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home_media ul .circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(4, 149, 247);
+  margin: 0 auto 5px auto;
+}
+.home_media ul li {
+  color: rgb(44, 44, 44);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 145%;
+  text-align: center;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
 .cards {
   margin-bottom: 207px;
 }
@@ -206,7 +276,7 @@ header .header_right span {
   gap: 35px 20px;
 }
 .cards .card {
-  width: calc(33.3333333333% - 30px);
+  width: calc(33.3333333333% - 14px);
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 0px 15px 31.7px -11px rgba(0, 43, 90, 0.25);
@@ -280,7 +350,7 @@ header .header_right span {
   align-items: center;
   justify-content: center;
   margin: 35px auto 0 auto;
-  width: 314px;
+  width: 90%;
   height: 76px;
   color: rgb(6, 118, 249);
   font-size: 14px;
@@ -317,7 +387,7 @@ header .header_right span {
   gap: 35px 20px;
 }
 .information .information_card {
-  width: calc(33.3333333333% - 20px);
+  width: calc(33.3333333333% - 14px);
 }
 .information p {
   color: rgb(44, 44, 44);
@@ -334,4 +404,138 @@ footer h6 {
   font-size: 12px;
   font-weight: 700;
   line-height: 145%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .home .home_img {
+    right: 0;
+    top: 20%;
+  }
+  .home .home_img img {
+    width: 600px;
+  }
+}
+@media only screen and (max-width: 993px) {
+  header {
+    margin: 45px 0 30px 0;
+  }
+  header .header_center {
+    display: none;
+  }
+  header .header_left {
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  header .header_left p {
+    font-size: 12px;
+    line-height: 145%;
+  }
+  header .header_right {
+    display: none;
+  }
+  .home {
+    display: none;
+  }
+  .home_media {
+    display: flex;
+  }
+  .cards .card {
+    width: calc(50% - 10px);
+  }
+  .information .information_card {
+    width: calc(50% - 10px);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cards {
+    margin-bottom: 149px;
+  }
+  .cards .cards_title {
+    margin: 0 auto 40px auto;
+    max-width: 262px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 130%;
+    text-align: center;
+  }
+  .cards .cards_in {
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  .cards .card {
+    border-radius: 20px;
+    width: 280px;
+  }
+  .cards .card .card_head {
+    gap: 12px;
+  }
+  .cards .card .card_head span {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 145%;
+  }
+  .cards .card .card_logo {
+    margin: 25px 0;
+    padding: 0 14px 0 25px;
+    gap: 20px;
+  }
+  .cards .card .card_logo .logo {
+    padding: 6px;
+    flex-shrink: 0;
+  }
+  .cards .card .card_logo .logo img {
+    width: 42px;
+    height: 42px;
+  }
+  .cards .card .logo_text h6 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 145%;
+  }
+  .cards .card .logo_text p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 145%;
+  }
+  .cards .card .card_block p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 145%;
+  }
+  .cards .card .card_block h5 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 145%;
+  }
+  .cards .card a {
+    height: 59px;
+  }
+  .cards .card .card_bottom_text {
+    padding: 15px 0 25px 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 145%;
+  }
+  .information .information_card {
+    width: 100%;
+  }
+  .information h3 {
+    max-width: 280px;
+    margin: 0 auto 15px auto;
+  }
+  .information .information_cards {
+    gap: 30px;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  footer {
+    margin: 60px 0;
+  }
+  footer h6 {
+    max-width: 280px;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=style.css.map */
